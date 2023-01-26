@@ -256,6 +256,7 @@ const ThreeApp = ({ className = '', }) => {
     <button onClick={handleExportScene}>Export scene to .gltf</button>
     {progress < 100 && <p>Loading {progress.toFixed(2)}%</p>}
     {progress < 100 && <div style={{
+      position: 'absolute',
       minWidth: '0',
       minHeight: loadingBarHeight,
       maxWidth: '100vw',
