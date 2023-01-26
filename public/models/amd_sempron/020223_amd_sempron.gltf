@@ -1,0 +1,349 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 516,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 178,
+      "max": [
+        9.17715740203857,
+        -0.248028323054314,
+        19.0984077453613
+      ],
+      "min": [
+        -9.17715740203857,
+        -1.73622167110443,
+        0.744093894958496
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 178,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 178,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 1701024,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 356642,
+      "max": [
+        8.90496349334717,
+        1.24005830287933,
+        18.8466091156006
+      ],
+      "min": [
+        -8.92912483215332,
+        0.248032495379448,
+        1.01974773406982
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 356642,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 356642,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5125,
+      "count": 36,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 24,
+      "max": [
+        9.92125034332275,
+        0.248034343123436,
+        19.8425025939941
+      ],
+      "min": [
+        -9.92125034332275,
+        -0.248034343123436,
+        1.9073486328125e-06
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Substance Painter 6.2.2",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2064,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2136,
+      "byteOffset": 2064,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2136,
+      "byteOffset": 4200,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1424,
+      "byteOffset": 6336,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6804096,
+      "byteOffset": 7760,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4279704,
+      "byteOffset": 6811856,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4279704,
+      "byteOffset": 11091560,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2853136,
+      "byteOffset": 15371264,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 18224400,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 18224544,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 288,
+      "byteOffset": 18224832,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 192,
+      "byteOffset": 18225120,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 18225312,
+      "uri": "020223_amd_sempron.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "020223_amd_sempron_baseColor.png"
+    },
+    {
+      "uri": "020223_amd_sempron_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "020223_amd_sempron_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "name": "020223_amd_sempron",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "020223_processor_cover",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "020223_pins",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "020223_circuit_board",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        2,
+        3,
+        5
+      ],
+      "name": "020223_circuit_board",
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "translation": [
+        0.0,
+        1.19018173217773,
+        -0.505100250244141
+      ]
+    },
+    {
+      "mesh": 2,
+      "name": "020223_circuit_board"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "020223_processor_cover"
+    },
+    {
+      "mesh": 0,
+      "name": "020223_processor_cover"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "020223_pins"
+    },
+    {
+      "mesh": 1,
+      "name": "020223_pins"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

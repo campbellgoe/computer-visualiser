@@ -1,0 +1,1 @@
+export const scrollbarWidthPx = 18
