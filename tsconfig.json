@@ -1,9 +1,22 @@
 {
   "compilerOptions": {
+    "baseUrl": "~",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@api/*": ["pages/api/*"],
+      "@protected/*": ["protected/*"],
+      "@public/*": ["public/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"]
+    },
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
+      "es5",
+      "es2015.collection",
+      "es2015.iterable",
       "esnext"
     ],
     "allowJs": true,
@@ -11,19 +24,21 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
+    "moduleResolution": "node",
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "downlevelIteration": true,
+    "importHelpers": true,
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "__tests__/index.test.jsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,3 +1,4 @@
+import React from 'react'
 import ThreeApp from '../components/Three/ThreeApp'
 
 const IndexPage = () => {
