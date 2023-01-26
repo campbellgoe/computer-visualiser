@@ -28,6 +28,17 @@ const GlobalStyle = createGlobalStyle`
   pre {
     white-space: pre-wrap;
   }
+  .author {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background: black;
+    color: white;
+    a {
+      color: #7da0e7;
+      font-weight: bold;
+    }
+  }
 `
 
 export default GlobalStyle
