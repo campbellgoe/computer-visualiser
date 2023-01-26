@@ -40,10 +40,16 @@ function useThree({ enableShader, glsl, initialCompileNumber = 0, setThreeApp, o
       setCompileNumber(index => index + 1)
     }, debounceInterval)
   }, [glsl])
+  const initialised = useRef(false)
   useEffect(() => {
     if (typeof window != 'undefined' && !stopRender.current && gui) {
 
       const init = async () => {
+        if(!initialised.current){
+          initialised.current = true
+        } else {
+          return
+        }
         const uniforms = {
           iTime: { type: 'float', value: 0 },
           iResolution: { type: 'vec2', value: new THREE.Vector2() }
