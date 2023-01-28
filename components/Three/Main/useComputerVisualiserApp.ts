@@ -282,6 +282,7 @@ function useThree({ enableShader, glsl, initialCompileNumber = 0, setThreeApp, o
                     // if(child.material.metalness){
                     //   child.material.metalness *= 0.95;
                     // }
+                    child.material.dithering = true
                     child.material.envMapIntensity = child.material.metalness//child.material.metalness ||//apply env map to all textures?
                     child.material.envMap = envMap
                   }
@@ -720,9 +721,7 @@ function useThree({ enableShader, glsl, initialCompileNumber = 0, setThreeApp, o
               
               const createLights = () => {
                 const topPointLights = [
-                  new THREE.PointLight(0xffffff, 8, 15),
-                  new THREE.PointLight(0xffffff, 8, 15),
-                  new THREE.PointLight(0xffffff, 8, 15),
+                  new THREE.PointLight(0xffffff, 12, 15),
                 ].map((pointGlow, index, arr) => {
                   const len = arr.length
                   const span = 8
@@ -735,12 +734,10 @@ function useThree({ enableShader, glsl, initialCompileNumber = 0, setThreeApp, o
                 })
                 const centralPointLights = [
                   [
-                    new THREE.PointLight(0xffffff, 4, 15),
-                    new THREE.PointLight(0xff0000, 4, 15)
+                    new THREE.PointLight(0xff0000, 8, 15)
                   ],
                   [
-                    new THREE.PointLight(0xffffff, 4, 15),
-                    new THREE.PointLight(0xff0000, 4, 15)
+                    new THREE.PointLight(0xffffff, 8, 15),
                   ]
                 ].reduce((acc, pointGlows, col) => ([...acc, ...pointGlows.map((pointGlow, row) => {
                   const len = pointGlows.length
@@ -748,11 +745,14 @@ function useThree({ enableShader, glsl, initialCompileNumber = 0, setThreeApp, o
                   const x = (col/len-.5)*distanceRange
                   const y = (row/len-.5)*distanceRange
                   pointGlow.position.set(x+1,y+4,0)
+                  pointGlow.shadow.camera.far = 15;
                   pointGlow.castShadow = false
                   return pointGlow
                 })]), [])
 
                 const spotLight = new THREE.SpotLight(0xffffff, 10, 20, Math.PI/3)
+                spotLight.shadow.camera.near = 1;
+                spotLight.shadow.camera.far = 10;
                 spotLight.castShadow = true
                 spotLight.position.set(-5, 5, 10)
                 spotLight.target = cpu
@@ -1222,7 +1222,6 @@ function useThree({ enableShader, glsl, initialCompileNumber = 0, setThreeApp, o
               const intersectingParts = []
 
               const intersectComputerModule = (group, partName = 'Computer', {setChildFn, unsetChildFn, setFn, unsetFn}) => {
-                console.log('partName', partName, !!group)
                 const intersects = raycaster.intersectObject(group)?.[0]
                 if(intersects){
                   if(setFn) setFn(group)
